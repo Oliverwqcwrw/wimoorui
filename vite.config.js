@@ -4,7 +4,7 @@ import {
 import vue from '@vitejs/plugin-vue'
 
 
-const serverurl = "http://127.0.0.1:8099/";
+const serverurl = "http://173.249.203.67:8099/";
 
 export default defineConfig({
 	plugins: [vue({
