@@ -4,10 +4,12 @@ import store from '@/store/index';
 import { ElMessage } from 'element-plus';
 
 const CancelToken = axios.CancelToken;
+const env = import.meta && import.meta.env && import.meta.env.NODE_ENV ? import.meta.env.NODE_ENV : process.env.NODE_ENV;
 let cancelMap = new Map();
 const request = axios.create({
     timeout: 600000,
-	headers:{'Content-Type':'application/json;charset=utf-8'}
+	headers:{'Content-Type':'application/json;charset=utf-8'},
+	baseURL: env === 'development' ? '' : 'http://173.249.203.67:8099',
 })
 request.defaults.maxConcurrentRequests = 100;
 axios.defaults.timeout = 300000;
