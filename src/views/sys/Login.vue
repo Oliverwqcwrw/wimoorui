@@ -74,7 +74,7 @@ import {ElMessage} from "element-plus";
 				 this.$router.push("/register"); 
 			},
             userLogin(){
-                 request.post("/api/auth/login",this.form).then(res=>{
+                 request.post("/auth/login",this.form).then(res=>{
                     if(res.data){
                         this.$message({
                             type:"success",

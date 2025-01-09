@@ -83,7 +83,7 @@ import {ElMessage} from "element-plus";
             
             },
 			 ssologinisrun(){
-			       return request.post("/api/auth/ssologinisrun");
+			       return request.post("/auth/ssologinisrun");
 			 }
         },
         mounted() {

@@ -68,7 +68,7 @@ function getbindId(data){
 }
 function changeLoginWechatApp(data){
 	  data.jsessionid= localStorage.getItem("jsessionid");  
-	 return request.get('/api/auth/changeLoginWechatApp',{params:data})
+	 return request.get('/auth/changeLoginWechatApp',{params:data})
 }
 function register(data){
   return request.post('/admin/api/v1/users/register',data)

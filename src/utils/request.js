@@ -17,8 +17,8 @@ axios.defaults.timeout = 300000;
 const whiteUrls = [
 "/user/add", 
 '/user/getUserList',
-'/api/auth/login',
-'/api/auth/ssologinisrun',
+'/auth/login',
+'/auth/ssologinisrun',
 "/user/update",
 "/user/deleteUser",
 "/admin/api/v1/sms/checkSmsCode",
@@ -29,7 +29,7 @@ const whiteUrls = [
 "/admin/api/v1/users/getEmailCode",
 "/admin/api/v1/users/register",
 "/admin/api/v1/users/updatePasswordForget",
-"/api/auth/verifySmsCode",
+"/auth/verifySmsCode",
 ]
 const whiteMutiUrls=[
 	"/amazon/api/v0/feed/submitfeedInfo",

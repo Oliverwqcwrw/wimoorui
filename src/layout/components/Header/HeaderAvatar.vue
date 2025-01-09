@@ -208,7 +208,7 @@
 				let self=this;
 				    var logintype = localStorage.getItem("logintype");
 					let jsessionid = localStorage.getItem("jsessionid");
-					request.get("/api/auth/apilogout").then(res => {
+					request.get("/auth/apilogout").then(res => {
 					  if ("api" == logintype) {
 						if (res.data=="success") {
 							self.$message({
