@@ -36,7 +36,7 @@ function verifyPassword(data){
   return request.post('/admin/api/v1/users/verifyPassword',data)
 }
 function verifySmsCode(data){
-	 return request.get( '/api/auth/verifySmsCode' ,{params:data});
+	 return request.get( '/auth/verifySmsCode' ,{params:data});
 }
 function getSmsCodes(data){
 	 return request.get('/admin/api/v1/users/getSmsCode' ,{params:data});

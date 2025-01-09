@@ -66,7 +66,7 @@ router.beforeEach(async(to,from,next)=>{
 	   	         await axios({
 					method:"get",
 					headers:{'Content-Type':'application/json;charset=utf-8','jsessionid':jsessionid},
-					url: '/api/admin/api/v1/menus/route'
+					url: '/admin/api/v1/menus/route'
 				}).then(res=>{
 					var result=res.data;
 					if (result==undefined || result.code == 'A0231'||result.code == 'A0200'||result.code == 'S0003'||result.code == 'S0002'||result.code == 'S0001') {
