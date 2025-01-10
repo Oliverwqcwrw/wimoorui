@@ -6,6 +6,7 @@ import sysRouter from './modules/sysRouter.js';
 import erp from './modules/erp.js';
 import amazon from './modules/amazon.js';
 import axios from 'axios';
+import request from "@/utils/request.js"; 
 let modules = import.meta.glob('../views/**/*.vue')
 const routes = [
   {
@@ -63,10 +64,10 @@ router.beforeEach(async(to,from,next)=>{
 		}else {
 			 let jsessionid = localStorage.getItem("jsessionid");
 			    loadflog.hasload=true;
-	   	         await axios({
-					method:"get",
-					headers:{'Content-Type':'application/json;charset=utf-8','jsessionid':jsessionid},
-					url: '/admin/api/v1/menus/route'
+
+					request.get({
+						url: '/admin/api/v1/menus/route',
+						headers:{'Content-Type':'application/json;charset=utf-8','jsessionid':jsessionid}
 				}).then(res=>{
 					var result=res.data;
 					if (result==undefined || result.code == 'A0231'||result.code == 'A0200'||result.code == 'S0003'||result.code == 'S0002'||result.code == 'S0001') {
